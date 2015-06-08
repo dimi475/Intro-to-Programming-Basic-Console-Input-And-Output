@@ -1,0 +1,41 @@
+//Write a program that reads two positive integer numbers and prints how many numbers p exist between them such that the reminder of the division by 5 is 0
+
+using System;
+
+class numsDivByGivNum
+{
+    static void Main()
+    {
+  //entering interval  
+        Console.Write("Enter numOne: ");
+        string strOne = Console.ReadLine() + Environment.NewLine;
+        Console.Write("Enter numTwo: ");
+        string strTwo = Console.ReadLine() + Environment.NewLine;
+        decimal numA,numB;
+        if (((decimal.TryParse(strOne, out numA)) && (decimal.TryParse(strTwo, out numB))))
+        {
+  //checking interval
+            if ((numB - numA) > 0) 
+            {
+                for (int i = (int)numA; i <= (int)numB; i++) 
+                {
+  //checking if current num is dividable by 5
+                    if (i % 5 == 0)
+                    {
+  //printing of the dividable num
+                        Console.Write(" {0},", i);
+                    }
+                    else 
+                    {
+                        continue;
+                    }
+                } 
+                Console.WriteLine();
+            }
+        }
+        else 
+        {
+            Console.WriteLine("You did not entered a number!");
+        }
+    }
+}

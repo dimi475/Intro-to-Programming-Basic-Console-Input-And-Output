@@ -1,0 +1,33 @@
+//Write a program that reads 3 numbers: an integer a (0 ≤ a ≤ 500), 
+a floating-point b and a floating-point c and prints them in 4 virtual columns on the console. 
+Each column should have a width of 10 characters. The number a should be printed in hexadecimal, 
+left aligned; then the number a should be printed in binary form, padded with zeroes, 
+then the number b should be printed with 2 digits after the decimal point, right aligned; 
+the number c should be printed with 3 digits after the decimal point, left aligned
+
+using System;
+
+class formattingNumbers
+{
+    static void Main()
+    {
+        Console.Write("Enter first number: ");
+        string strOne = Console.ReadLine() + Environment.NewLine;
+        Console.Write("Enter second number: ");
+        string strTwo = Console.ReadLine()+Environment.NewLine;
+        Console.Write("Enter third number: ");
+        string strThree = Console.ReadLine() + Environment.NewLine;
+        int numOne;
+        float numTwo, numThree;
+        
+        if (((int.TryParse(strOne, out numOne))&&(0<=numOne)&&(numOne<=500) && (float.TryParse(strTwo, out numTwo)) && (float.TryParse(strThree, out numThree))))
+        {
+            string binOne = Convert.ToString(numOne, 2);
+            Console.WriteLine("{0,-10:X}|{1,10:G10}|{2,10:F2}|{3,-10:F3}|",numOne,binOne.PadLeft(10,'0'),numTwo,numThree);
+        }
+        else
+        {
+            Console.WriteLine("You entered invalid number");
+        }
+    }
+}

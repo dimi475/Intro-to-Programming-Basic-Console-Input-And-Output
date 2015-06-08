@@ -1,0 +1,34 @@
+//A company has name, address, phone number, fax number, web site and manager. 
+The manager has first name, last name, age and a phone number. 
+Write a program that reads the information about a company and its manager and prints it back on the console.//
+
+using System;
+
+class companyInfo
+{
+    static void Main()
+    {
+//Entering data from console
+        Console.Write("Please enter company name: ");
+        string companyName = Console.ReadLine();
+        Console.Write("Please enter company address: ");
+        string companyAddress = Console.ReadLine();
+        Console.Write("Please enter phone number: ");
+        string phoneNum = Console.ReadLine();
+        Console.Write("Please enter fax number: ");
+        string faxNum = Console.ReadLine();
+        Console.Write("Please enter web site: ");
+        string websiteURL = Console.ReadLine();
+        Console.Write("Please enter manager first name: ");
+        string managFirstName = Console.ReadLine();
+        Console.Write("Please enter manager last name: ");
+        string managLastName = Console.ReadLine();
+        Console.Write("Please enter manager age: ");
+        string managAge = Console.ReadLine();
+        Console.Write("Please enter manager phone number: ");
+        string manPhoneNum = Console.ReadLine();
+        Console.WriteLine();
+//Console output of the data
+        Console.WriteLine("Company name: {0}" + Environment.NewLine + "Company address: {1}" + Environment.NewLine + "phone number: {2}" + Environment.NewLine + "fax number: {3}" + Environment.NewLine + "web site: {4}" + Environment.NewLine + "Manager First Name: {5}" + Environment.NewLine + "Manager Last Name: {6}" + Environment.NewLine + "Manager Age: {7}" + Environment.NewLine + "Manager phone number: {8}", companyName, companyAddress, phoneNum, faxNum, websiteURL, managFirstName, managLastName, managAge, manPhoneNum);
+    }
+}

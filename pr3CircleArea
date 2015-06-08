@@ -1,0 +1,28 @@
+/*Write a program that reads the radius r of a circle 
+and prints its perimeter and area formatted with 2 digits after the decimal point*/
+
+using System;
+
+class circleArea
+{
+    static void Main()
+    {
+//entering data from console
+        Console.Write("Please enter the radius :");
+        string radStr = Console.ReadLine();
+        double radNum, perimSum, areaSum;
+        if (double.TryParse(radStr, out radNum)) 
+        {
+//calculating triangle area
+            perimSum = 2 * Math.PI * radNum;
+            areaSum = Math.PI * (radNum * radNum);
+            Console.WriteLine("circle perimeter = {0:0.00} \r\ncircle area = {1:0.00}", perimSum, areaSum);
+        }
+        else
+        {
+            Console.WriteLine("You are entered invalid parameter!");
+        }
+
+    }
+}
+

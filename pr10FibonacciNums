@@ -1,0 +1,42 @@
+//Write a program that reads a number n and prints on the console the first n members of the Fibonacci sequence (at a single line, separated by spaces) : 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, …. Note that you may need to learn how to use loops
+
+using System;
+class fibonacciNums
+{
+    static void Main()
+    {
+        Console.Write("Enter number: ");
+        string strOne = Console.ReadLine() + Environment.NewLine;
+        int num = 0;
+        int count = 0;
+        int numOne=0;
+        int numTwo=1;
+        int numThree = 0;
+        if (Int32.TryParse(strOne, out num))
+        {
+            if (num == 1)
+            {
+                Console.Write("0" + Environment.NewLine);
+            }
+            else if (num == 2)
+            {
+                Console.Write("0 1" + Environment.NewLine);
+            }
+            else
+            {
+                Console.Write("0 1 " );
+                for (count = 2; count < num; count++)
+                {
+                    numThree = numOne + numTwo;
+                    numOne = numTwo;
+                    numTwo = numThree;
+                    Console.Write(numThree + " ");
+                }
+            }
+        }
+        else
+        {
+            Console.WriteLine("You did not entered a number!");
+        }
+    }
+}

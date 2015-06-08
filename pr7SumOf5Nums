@@ -1,0 +1,22 @@
+//Write a program that enters 5 numbers (given in a single line, separated by a space), calculates and prints their sum. 
+
+
+
+using System;
+
+class sumOf5Nums
+{
+    static void Main()
+    {
+        Console.Write("Enter five numbers, separated by interval: ");
+        string strOne = Console.ReadLine() + Environment.NewLine;
+        string[] nums = strOne.Split(' ');
+        double sum = 0;
+        foreach(string numStr in nums)
+        {
+            double numD = Convert.ToDouble(numStr);
+            sum += numD;      
+        }
+        Console.WriteLine(sum);
+    }
+}

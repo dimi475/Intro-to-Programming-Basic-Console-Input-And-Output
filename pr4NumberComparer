@@ -1,0 +1,25 @@
+//Write a program that gets two numbers from the console and prints the greater of them. 
+Try to implement this without if statements
+
+using System;
+
+class numberComparer
+{
+    static void Main()
+    {
+        try
+        {
+            Console.Write("Please enter first number: ");
+            double numOne = double.Parse(Console.ReadLine());
+            Console.Write("Please enter second number: ");
+            double numTwo = double.Parse(Console.ReadLine());
+            double[] nums = { numOne, numTwo };
+            Array.Sort(nums);
+            Console.WriteLine("greater is = {0}", nums[1]);
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Invalid number.");
+        }
+    }
+}

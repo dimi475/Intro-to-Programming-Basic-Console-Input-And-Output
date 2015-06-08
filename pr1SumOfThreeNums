@@ -1,0 +1,23 @@
+using System;
+
+class sumOf3Nums
+{
+    static void Main()
+    {
+        string strOne = Console.ReadLine();
+        string strTwo = Console.ReadLine();
+        string strThree = Console.ReadLine();
+        float numOne;
+        float numTwo;
+        float numThree;
+        if (((float.TryParse(strOne,out numOne))&&(float.TryParse(strTwo,out numTwo))&&(float.TryParse(strThree,out numThree))))
+        {
+            float sum = numOne + numTwo + numThree;
+            Console.WriteLine("sum of {0}+{1}+{2} = {3} ", numOne, numTwo, numThree, sum);
+        }
+        else 
+        {
+            Console.WriteLine("You are entered invalid number");
+        }
+    }
+}

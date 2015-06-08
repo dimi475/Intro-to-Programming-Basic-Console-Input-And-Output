@@ -1,0 +1,31 @@
+//Write a program that enters a number n and after that enters more n numbers and calculates and prints their sum. Note that you may need to use a for-loop 
+
+
+
+using System;
+class sumOfNNums
+{
+    static void Main()
+    {
+        Console.Write("Enter number: ");
+        string strOne = Console.ReadLine() + Environment.NewLine;
+        int num = 0;
+        int count = 0;
+        double numD = 0;
+        double sum = 0;
+        if (Int32.TryParse(strOne, out num))
+        {
+            Console.WriteLine("Enter {0} numbers: ", num);
+            for (count = 0; count < num; count++)
+            {
+                numD = double.Parse(Console.ReadLine());
+                sum += numD;
+            }
+            Console.WriteLine(sum);
+        }
+        else
+        {
+            Console.WriteLine("You did not entered a number!");
+        }
+    }
+}
